@@ -1,3 +1,5 @@
+import math
+
 students = int(input())
 lectures = int(input())
 bonus = int(input())
@@ -12,5 +14,5 @@ for i in range(0, students):
         maxbonus = totalBonus
         maxattendance = attendance
 
-print(f"Max Bonus: {maxbonus.__ceil__}.")
+print(f"Max Bonus: {math.ceil(maxbonus)}.")
 print(f"The student has attended {maxattendance} lectures.")
