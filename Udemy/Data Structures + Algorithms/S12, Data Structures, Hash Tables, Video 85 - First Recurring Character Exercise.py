@@ -9,4 +9,4 @@ def recurring(listofints):
             dict[num]=num
     return print("Undefined")
 
-recurring([2,1,4,6,5,1,0])
+recurring([2,5,5,6,2,1,0])
