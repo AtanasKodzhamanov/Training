@@ -1,3 +1,7 @@
+# bubble sort starts from the beginning of a list and compairs each pair of values,
+# switching their positions if the left value is larger than the right one
+
+# can be made more efficient
 
 unsorted=[100, 40, 60, 10, 0, -40, -200, -30, 1, 2, 3, 4, 5, 6, -5]
 
