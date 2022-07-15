@@ -5,6 +5,7 @@ from numpy.random import randn
 
 # 1. Series 
 # Similar to NumPy's arrays but can be given a named or datetime index
+# list -> series -> dataframe
 
 labels = ["a","b","c"]
 my_list=[10,12,14]
