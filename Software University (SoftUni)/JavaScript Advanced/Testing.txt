@@ -1,0 +1,4 @@
+npm init - creates package.json
+npm install - creates package-lock.json
+npm install chai
+npm install mocha 
