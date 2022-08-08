@@ -16,7 +16,7 @@ class ArtGallery{
         
         let isInTheArr=false
 
-        for (const element of this.listOfArticles){
+        for (let element of this.listOfArticles){
             if(element.articleName==articleName && element.articleModel==articleModel){
                 element.quantity += Number(quantity)
                 isInTheArr=true
