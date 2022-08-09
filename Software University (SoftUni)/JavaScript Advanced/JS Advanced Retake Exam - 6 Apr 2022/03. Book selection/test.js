@@ -1,5 +1,6 @@
-let expect = requre("chai").expect
-let bookSelection=require("./bookSelection")
+
+let {bookSelection} = require("./bookSelection.js")
+let {expect} = requre("chai")
 
 describe("bookSelection",()=>{
     describe("isGenreSuitable", ()=>{

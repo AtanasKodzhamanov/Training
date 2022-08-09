@@ -1,17 +1,13 @@
-npm init - creates package.json
-npm install - creates package-lock.json
-npm install chai
-npm install mocha 
-
+npm init -y - creates package.json
 npm install chai, mocha
 
-let expect = requre("chai").expect
+let expect = requre("chai")
 let companyAdministration=require("./companyAdministration")
 
 describe("nameoffiletobetested",()=>{
     describe("funcname", ()=>{
 	it("test 1",()=>{
-            expect(()=>nameoffiletobetested.funcname(inputs you are testing)).to.throw(if an expected error message pops up)
+            expect(()=>nameoffiletobetested.funcname(inputs you are testing)).to.throw(if an expected error message pops up) //remove ()=> for other comparators
         })
     })
     describe("funcname", ()=>{
@@ -24,3 +20,9 @@ describe("nameoffiletobetested",()=>{
 
 .to.equal()
 .to.throw()
+.to.deep.equal() - when comparing arrays
+
+Go to package.json 
+change to "test": "mocha"
+
+npm run test
