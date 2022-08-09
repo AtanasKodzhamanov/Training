@@ -1,7 +1,18 @@
 npm init -y - creates package.json
 npm install chai, mocha
 
-let expect = requre("chai")
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser (Must have this setting set in the terminal)
+Must have only one file in the folder, with the folder's name not having any spaces
+
+have the test in test.js
+
+to run type:
+mocha
+
+
+module.exports=companyAdministration (export a module in the code you are testing)
+
+let {assert, expect} = require("chai")
 let companyAdministration=require("./companyAdministration")
 
 describe("nameoffiletobetested",()=>{
@@ -22,7 +33,5 @@ describe("nameoffiletobetested",()=>{
 .to.throw()
 .to.deep.equal() - when comparing arrays
 
-Go to package.json 
-change to "test": "mocha"
 
-npm run test
+
