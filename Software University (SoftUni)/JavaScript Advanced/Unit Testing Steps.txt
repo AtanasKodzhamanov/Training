@@ -2,3 +2,22 @@ npm init - creates package.json
 npm install - creates package-lock.json
 npm install chai
 npm install mocha 
+
+npm install chai, mocha
+
+let expect = requre("chai").expect
+let companyAdministration=require("./companyAdministration")
+
+describe("nameoffiletobetested",()=>{
+    describe("funcname", ()=>{
+	it("test 1",()=>{
+            expect(()=>nameoffiletobetested.funcname(inputs you are testing)).to.throw(if an expected error message pops up)
+        })
+    })
+    describe("funcname", ()=>{
+        
+    })
+    describe("funcname", ()=>{
+        
+    })
+})
