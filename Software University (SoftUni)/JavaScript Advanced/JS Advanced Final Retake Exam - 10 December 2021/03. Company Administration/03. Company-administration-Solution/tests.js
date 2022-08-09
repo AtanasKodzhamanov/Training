@@ -24,6 +24,7 @@ describe("companyAdministration", () => {
   describe("calculateSalary", () => {
     it("check if hours is not a number", () => {
       expect(() => companyAdministration.calculateSalary("a")).to.throw(
+        
         "Invalid hours"
       );
     });
