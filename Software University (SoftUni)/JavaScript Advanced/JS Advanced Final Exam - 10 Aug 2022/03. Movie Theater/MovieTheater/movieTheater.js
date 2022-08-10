@@ -72,5 +72,4 @@ const movieTheater = {
     return Math.max(...availableRows);
   },
 };
-
 module.exports=movieTheater
