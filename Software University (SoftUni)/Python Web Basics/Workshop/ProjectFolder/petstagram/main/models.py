@@ -1,10 +1,10 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 
-from ProjectFolder.petstagram.main.validators import only_letters_validator
+from petstagram.main.validators import only_letters_validator
 
 # Create your models here.
-class Profile(models.Models):
+class Profile(models.Model):
     FIRST_NAME_MIN_LENGTH=2
     LAST_NAME_MIN_LENGTH=2    
     FIRST_NAME_MAX_LENGTH=30
@@ -68,7 +68,7 @@ class Pet(models.Model):
         max_length=max(len(x) for(x,_)in TYPES)
     )
 
-    date_of_birth=models.DataField(
+    date_of_birth=models.DateField(
         null=True, 
         blank=True
     )
@@ -80,3 +80,28 @@ class Pet(models.Model):
 
     class Meta:
         unique_together=("user_profile","name")
+
+
+class PetPhoto(models.Model):
+    photo=models.ImageField(
+        validators=(
+            #validate_file_max_size_in_mb(5)
+        )
+    )
+    tagged_pets=models.ManyToManyField(
+        Pet,
+    )
+
+    description = models.TextField(
+        null=True, 
+        blank=True
+    )
+
+    publication_date=models.DateTimeField(
+        auto_now_add=True,
+    
+    )
+
+    likes=models.IntegerField(
+        default=0
+    )

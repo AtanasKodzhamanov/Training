@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from ProjectFolder.petstagram.main.models import Pet
+from petstagram.main.models import Pet
 from petstagram.main.models import Profile 
 
 # Register your models here.
