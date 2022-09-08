@@ -30,24 +30,18 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-DJANGO_APPS=(
+
+
+INSTALLED_APPS = (
         'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'petstagram.main'
 )
-
-THIRDPARTY_APPS=(
-
-)
-
-PETSTAGRAM_APPS=(
-    "petstagram.main"
-)
-
-INSTALLED_APPS = DJANGO_APPS+THIRDPARTY_APPS+PETSTAGRAM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
