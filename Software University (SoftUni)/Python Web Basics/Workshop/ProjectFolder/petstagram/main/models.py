@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 
-from petstagram.petstagram.main.validators import only_letters_validator
+from ProjectFolder.petstagram.main.validators import only_letters_validator
 
 # Create your models here.
 class Profile(models.Models):
@@ -49,3 +49,34 @@ class Profile(models.Models):
         blank=True,
     )
 
+class Pet(models.Model):
+    CAT="Cat"
+    DOG="Dog"
+    BUNNY="Bunny"
+    PARROT="Parrot"
+    FISH="Fish"
+    OTHER="Other"
+
+    TYPES=((x,x) for x in (CAT,DOG,BUNNY,PARROT,FISH,OTHER))
+    NAME_MAX_LENGTH=30
+
+    name=models.CharField(
+        max_length=NAME_MAX_LENGTH,
+    )
+
+    type=models.CharField(
+        max_length=max(len(x) for(x,_)in TYPES)
+    )
+
+    date_of_birth=models.DataField(
+        null=True, 
+        blank=True
+    )
+
+    user_profile=models.ForeignKey(
+        Profile,
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        unique_together=("user_profile","name")
