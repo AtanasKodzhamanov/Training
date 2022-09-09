@@ -3,12 +3,22 @@ from django.http import HttpResponse
 # Create your views here.
 from datetime import datetime 
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-def home(request):
+class HomeView(TemplateView):
+    template_name = "home/welcome.html"
+    extra_context: {"today": datetime.today()}
+
+class AuthorizedView(LoginRequiredMixin, TemplateView):
+    template_name = "home/authorized.html"
+    login_url="/admin"
+
+#def home(request):
     #return HttpResponse("Hellow,world")
-    return render(request, "home/welcome.html",{"today": datetime.today})
+  #  return render(request, "home/welcome.html",{"today": datetime.today()})
 
-@login_required
-def authorized(request):
-    return render(request, "home/authorized.html",{})
+##@login_required
+#def authorized(request):
+  #  return render(request, "home/authorized.html",{})
