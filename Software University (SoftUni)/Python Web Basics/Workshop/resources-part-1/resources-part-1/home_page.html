@@ -15,7 +15,6 @@
 
 <body>
 
-
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:2%">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -40,9 +39,36 @@
     </div>
 </nav>
 <!-- End Navigation Bar -->
+
 <div class="container">
-    {% block page_content %}
-    {% endblock %}
+    <div class="jumbotron parent">
+        <img style="width: 100%"
+             src="https://activepets.co.za/web/ap-content/uploads/2019/08/Active-pets-dogs-and-cats.png" alt="">
+        <div class="absolute">
+            <h1 class="display-4">Welcome to Petstagram</h1>
+            <p class="lead">Share your pets photos.</p>
+            <hr class="my-4">
+            <div class="inner cover">
+                <h1 class="cover-heading"></h1>
+                <div class="row">
+
+                    <!-- Button to show if profile created -->
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <a href="#" class="btn btn-lg btn-secondary">Enter</a></p>
+                    </div>
+
+                    <!-- Button to show if profile is NOT created -->
+                    <div class="col-lg-6">
+                        <p class="lead">
+                            <a href="#" class="btn btn-lg btn-secondary">Create Profile</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Page Footer -->
@@ -50,6 +76,8 @@
     <div>@2022 Python Web Basics Workshop at SoftUni</div>
 </footer>
 <!-- End Page Footer -->
+
+</body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -60,6 +88,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
-</body>
 
 </html>
