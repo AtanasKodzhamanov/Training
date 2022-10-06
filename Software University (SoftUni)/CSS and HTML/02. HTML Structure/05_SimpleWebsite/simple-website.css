@@ -1,0 +1,48 @@
+body{
+    Margin: 0px;
+    Padding: 0px;
+    Background-Color: #CCCCCC;
+}
+ul{
+    Background-Color: #444;
+    text-align: center;
+    Padding: 0px;
+    Margin: 0px;
+    list-style:none;
+}
+li{
+    display: inline-block;
+    font-size: 24px;
+    Line-Height: 40px;
+    Height: 40px;
+    Padding: 20px;
+}
+a{
+    text-decoration: none;
+    Color: #ffffff;
+}
+
+
+h1{
+    font-size: 28px;
+}
+header>p{
+    font-style:italic;
+}
+article>p{
+    font-size:24px;
+}
+
+section{
+    margin-left:20px;
+}
+
+footer{
+    Background-color: #444;
+}
+footer {
+    background: #444;
+    color: #fff;
+    text-align: center;
+    padding:10px;
+}
