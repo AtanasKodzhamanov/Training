@@ -1,0 +1,39 @@
+section{
+    border: 8px;
+    border-color: #e6e6e6;
+    Padding: 16px;
+    Width: 451px;
+    Height: 540px;
+}
+
+<h2>:
+Font: Merriweather
+Generic Font: serif
+Font weight 700
+Top & bottom margin 1.2rem
+Left & right margin 0
+Color: rgb(51, 51, 51)
+<div>:
+Font weight 600
+Font size: 20px
+<button>:
+Width: 250px
+Font : Work Sans
+Generic Font: sans-serif
+Font weight 600
+Font size: 18px
+Border radius: 4px
+Background color: #d5384d
+Text color: #fff
+Letter spacing: 1px
+Align the text to the center
+Top & bottom padding 8px
+Left & right padding 16px
+Top margin: 20px
+Bottom margin: 20px
+<p>:
+Fonts: Georgia, Cambria, Times New Roman, Times
+Generic Font: serif
+Font size: 18px
+Height of the line: 30px
+Top margin:
