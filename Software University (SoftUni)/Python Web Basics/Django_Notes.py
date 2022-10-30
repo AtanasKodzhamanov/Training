@@ -1,6 +1,7 @@
 # the command migrate makes changes to the database
 
 # Commands
+# django-admin startproject name
 # python manage.py createsuperuser
 # python manage.py makemigrations (do after writing a model)
 # python manage.py migrate - will apply the migrations
