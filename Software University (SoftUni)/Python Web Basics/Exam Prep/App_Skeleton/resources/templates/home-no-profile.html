@@ -1,9 +1,4 @@
-
-{% extends "base.html" %}
-{% load static%}
 <!--Home Page-->
-
-{% block content %}
 <div class="container-inline">
     <section id="welcomePage">
         <div id="welcome-message">
@@ -11,13 +6,13 @@
             <h1>My Music App!</h1>
         </div>
         <div class="music-img">
-            <img src="{% static "/images/musicIcons.webp" %}" alt="music-icon">
+            <img src="/static/images/musicIcons.webp" alt="music-icon">
         </div>
     </section>
 
     <!-- Registration -->
     <section id="registerPage">
-        <form method="post" action ="{% url "add_profile" %}">
+        <form>
             <fieldset>
                 <legend>Profile</legend>
                 <!-- Form for Registration -->
@@ -29,13 +24,9 @@
 
                 <label for="age">Age:</label>
                 <input id="age" name="age" type="number" min="0" placeholder="Age">
-                
-                {{ form }}
                 <!-- Button to Create Profile -->
                 <button type="submit" class="register">Enter</button>
-                {% csrf_token %}
             </fieldset>
         </form>
     </section>
 </div>
-{% endblock %}
