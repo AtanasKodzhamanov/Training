@@ -60,7 +60,7 @@ def profile_edit_view(request):
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect("catalogue")
+            return redirect("profile_details")
     context = {
         "profile": profile,
         "form": form,
@@ -75,7 +75,8 @@ def profile_delete_view(request):
         form = ProfileDeleteForm(request.POST, instance= profile)
         if form.is_valid():
             form.save()
-            return redirect("catalogue")
+            Plant.objects.all().delete()
+            return redirect("home")
     context = {
         "profile": profile,
         "form": form,
