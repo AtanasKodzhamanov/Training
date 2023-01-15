@@ -15,16 +15,31 @@
 
 '''
 
-Steps
+django-admin startproject myproject
 
-Create your project and apps. 
-Move apps within your main folder.
-Set up settings: 
-    - add installed apps 
-    - add postgre database
-    - add staticfiles folder 
-Create urls.py file in each app and link to the templates 
-Update main urls 
-Update views to render templates 
+Move to the project folder and create an app:
+    python manage.py startapp myapp
+
+Should have the following structure:
+    myproject
+        manage.py
+        myproject
+            settings.py
+            webapp
+                views.py
+        staticfiles
+        templates
+
+Then add the app to the installed apps in settings.py
+    'myproject.myapp',
+
+Then add the app to the urls.py in the project folder
+    path("", include("myproject.myapp.urls")),
+
+Go to settings and add database connection. 
+    python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
 
 '''
