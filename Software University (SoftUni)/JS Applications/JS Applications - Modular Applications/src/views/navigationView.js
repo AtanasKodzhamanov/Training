@@ -1,6 +1,24 @@
 import {html } from "../../node_modules/lit-html/lit-html.js";
 import * as authService from "../services/authService.js";
 
+const guestLinks = html `
+    <li class="nav-item">
+    <a class="nav-link" href="/login">Login</a>
+    </li>                  
+    <li class="nav-item">
+    <a class="nav-link" href="/register">Register</a>
+    </li>
+`
+
+const privateLinks = html `
+    <li class="nav-item">
+    <a class="nav-link" href="/logout">Logout</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/collection">My Collection</a>
+    </li>
+`
+
 const navigationTemplate = (isAuthenticated) => html`
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -13,23 +31,10 @@ const navigationTemplate = (isAuthenticated) => html`
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/collection">My Collection</a>
-            </li>
+
             ${isAuthenticated 
-                ? html`
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Logout</a>
-                </li>                  
-                `
-                : html`
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>                  
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
-                `
+                ? privateLinks
+                : guestLinks
             }
 
             <li class="nav-item">
