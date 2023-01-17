@@ -1,2 +1,5 @@
 npm install - installs all pre-defined packages in package.json
-npm start - activates the start script at localhost 3000
+npm start - activates the start script which runs http server at localhost 3000 (must manually refresh)
+npm i lite-server - install lite server
+add "dev": "lite-server" to scripts 
+npm run dev - will automatically look for index.html and run it
