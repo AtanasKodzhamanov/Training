@@ -9,6 +9,10 @@ const save = (user) => {
     }
 };
 
+export const isAuthenticated = () => {
+    let accessToken = localStorage.getItem("accessToken");
+    return Boolean(accessToken);
+}
 
 export const login = (email, password) => {
     return fetch(`${baseURL}/login`, {
@@ -36,11 +40,6 @@ export const register = (email, password, username) => {
 
             return user;
     });
-}
-
-export const isAuthenticated = () => {
-    let accessToken = localStorage.getItem("accessToken");
-    return Boolean(accessToken);
 }
 
 export const logout = () => {
