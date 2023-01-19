@@ -1,24 +1,20 @@
-#left and right
+# left and right
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        left=0
-        right=len(nums)-1
-        count=0
-        for i in range(len(nums)):
-            if nums[left]==val:
-                if nums[right]==val:
-                    right-=1 
-                    i-=1
+        left = 0
+        right = len(nums)-1
+        while (left <= right):
+            if nums[left] == val:
+                if nums[right] == val:
+                    right -= 1
                 else:
-                    nums[left]=nums[right]
-                    nums[right]=val
-                    left+=1
-                    count+=1
+                    nums[left] = nums[right]
+                    nums[right] = val
+                    left += 1
             else:
-                left+=1
-                count+=1
-        return count
+                left += 1
+        return left
 
 # fast and slow
 
