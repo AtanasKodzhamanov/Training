@@ -1,0 +1,10 @@
+docker run -p 8000:3000 688890a93a1c
+
+-p sets the port local and exposed 
+
+Docker ps
+Finds all running containers 
+
+Docker stop container_name 
+Terminates container 
+
