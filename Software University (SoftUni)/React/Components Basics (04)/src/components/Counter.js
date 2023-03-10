@@ -32,13 +32,6 @@ const Counter = (props) => {
         setCounter(0);
     };
 
-    // let title = 'Counter';
-    // if (counter == 1) {
-    //     title = 'First Blood';
-    // } else if(counter == 2) {
-    //     title = 'Double Kill';
-    // }
-
     return (
         <div>
             <p style={{fontSize: Math.max(counter, 1) / 2 + 'em'}}>
