@@ -1,0 +1,33 @@
+docker run -p 8000:3000 688890a93a1c
+
+-p sets the port local and exposed 
+
+Docker ps
+Finds all running containers 
+
+Docker stop container_name 
+Terminates container 
+
+Docker run -it --name python app_name image_name
+Allows for an interactive container with terminal input
+Allows to name the container
+
+Docker ps -a 
+Shows container run history
+
+Docker rm container_name 
+Deletes container 
+
+Docker images
+Lists images 
+
+Docker image prune -a 
+Deletes all images (-a deletes those with tags as well) 
+
+Docker build -t name:tag_name 
+Adds a tag 
+
+docker rmi image_name
+Delete image
+
+When running a container you can add --rm to make sure it atomically gets removed when it stops
