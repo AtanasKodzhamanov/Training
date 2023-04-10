@@ -1,4 +1,5 @@
 import { clearUserData, getUserData } from "./util"
+import { notify } from "./notifications"
 const host = "http://localhost:3003"
 
 async function request(url, method, data){
@@ -35,7 +36,7 @@ async function request(url, method, data){
             return res.json();
         }
         } catch (err){
-            alert(err.message);
+            notify(err.message);
             throw err;
         }
 
@@ -57,3 +58,4 @@ export async function put(url, data){
 export async function del(url){
     return request(url, 'DELETE');
 }
+

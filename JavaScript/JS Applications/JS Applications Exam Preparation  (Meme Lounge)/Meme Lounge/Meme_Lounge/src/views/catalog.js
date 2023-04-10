@@ -26,7 +26,6 @@ const memeCard = (meme) => html`
                             <a class="button" href="/memes/${meme._id}">Details</a>
                         </div> 
                     </div>
-				    <p class="no-memes">No memes in database.</p>
                 </div>
 `;
 
