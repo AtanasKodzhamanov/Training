@@ -1,9 +1,6 @@
 from scipy.optimize import minimize
 import numpy as np
 import pandas as pd
-Mean-Variance Portfolio Optimization: The mean-variance portfolio optimization model is another widely used approach to portfolio optimization. It involves selecting a combination of assets that maximize the expected return for a given level of risk, while also taking into account the investor's risk aversion. The following code demonstrates how to implement the mean-variance model using Python:
-python
-Copy code
 
 # Define expected returns and covariance matrix
 returns = np.array([0.05, 0.1, 0.12, 0.07])
@@ -40,14 +37,11 @@ bounds = tuple((0, 1) for i in range(len(returns)))
 result = minimize(portfolio_expected_return, len(
     returns)*[1/len(returns)], args=(returns,), constraints=constraints, bounds=bounds)
 
-Get optimal portfolio weights
 weights = result.x
 
-Calculate portfolio expected return and variance
 portfolio_return = np.dot(weights.T, returns)
 portfolio_variance = portfolio_variance(weights, covariance)
 
-Calculate optimal portfolio Sharpe ratio
 sharpe_ratio = (portfolio_return - risk_free_rate) / \
     np.sqrt(portfolio_variance)
 

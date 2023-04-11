@@ -1,9 +1,6 @@
 from scipy.optimize import minimize
 import numpy as np
 import pandas as pd
-Markowitz Portfolio Optimization: The Markowitz Portfolio Optimization model is a widely used approach to portfolio optimization. It involves selecting a combination of assets that maximize the expected return for a given level of risk. The following code demonstrates how to implement the Markowitz model using Python:
-python
-Copy code
 
 # Define expected returns and covariance matrix
 returns = np.array([0.05, 0.1, 0.12, 0.07])
@@ -34,4 +31,3 @@ result = minimize(portfolio_variance, len(
 
 # Print optimized portfolio weights
 print(result.x)
-In this example, we have four assets with given expected returns and covariance matrix. We define the objective function to minimize portfolio variance, and specify constraints and bounds for the optimization. The result gives us the optimal portfolio weights.

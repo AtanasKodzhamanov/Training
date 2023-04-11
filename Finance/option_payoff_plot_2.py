@@ -1,9 +1,4 @@
 import numpy as np
-This code plots the payoff diagrams for a call option and a put option with a strike price of 100 and a premium of 5.
-
-Simulating option prices using Monte Carlo simulation:
-python
-Copy code
 
 S = 100  # stock price
 K = 105  # strike price
@@ -30,4 +25,3 @@ put_price = np.mean(np.exp(-r * T) * put_payoffs)
 
 print("Call price:", call_price)
 print("Put price:", put_price)
-This code simulates the price of a European call option and a European put option using Monte Carlo simulation. The code generates 1000 simulated stock price paths using a geometric Brownian motion model and calculates the option prices based on the simulated prices.
