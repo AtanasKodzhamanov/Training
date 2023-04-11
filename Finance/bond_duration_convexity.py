@@ -1,4 +1,4 @@
-
+import numpy as np
 # Duration measures the sensitivity of a bond's price to changes in interest rates. It takes into account the time to maturity of the bond, the coupon rate, and the current level of interest rates. A higher duration indicates that a bond's price is more sensitive to changes in interest rates. For example, if interest rates rise, the price of a bond with a longer duration will fall more than the price of a bond with a shorter duration.
 
 # Modified duration = (1 / (1 + y)) x [(1 - (1 + y)^(-n)) / y] + (n / (1 + y)^n)
@@ -41,7 +41,3 @@ def bond_convexity(face_value, coupon_rate, time_to_maturity, yield_to_maturity)
     convexity /= (1 + r) ** 2
     return convexity
 
-
-# Example usage:
-face_value = 1000
-coupon_rate = 0
