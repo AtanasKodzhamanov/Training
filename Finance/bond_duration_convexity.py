@@ -11,13 +11,14 @@ import numpy as np
 
 # Assume semi-annual coupon payments
 
-
 def bond_duration(face_value, coupon_rate, time_to_maturity, yield_to_maturity):
-    c = face_value * coupon_rate
-    n = time_to_maturity * 2
-    r = yield_to_maturity / 2
-    coupon_payments = [c] * int(n)
-    coupon_payments[-1] += face_value
+    c = face_value * coupon_rate # coupon payment
+    n = time_to_maturity * 2 # number of coupon payments
+    r = yield_to_maturity / 2 # periodic yield to maturity
+    
+    coupon_payments = [c] * int(n) # create a list of coupon payments
+    coupon_payments[-1] += face_value # add face value to last coupon payment
+    
     discount_factors = [(1 + r) ** (-i) for i in range(1, int(n) + 1)]
     present_values = [d * c for d, c in zip(discount_factors, coupon_payments)]
     bond_price = np.dot(coupon_payments, discount_factors)
@@ -41,3 +42,14 @@ def bond_convexity(face_value, coupon_rate, time_to_maturity, yield_to_maturity)
     convexity /= (1 + r) ** 2
     return convexity
 
+def bond_price_change(face_value, coupon_rate, time_to_maturity, yield_to_maturity, yield_change):
+    # Calculate duration
+    duration = bond_duration(face_value, coupon_rate, time_to_maturity, yield_to_maturity)
+    
+    # Calculate convexity
+    convexity = bond_convexity(face_value, coupon_rate, time_to_maturity, yield_to_maturity)
+    
+    # Calculate the estimated price change
+    price_change = -duration * yield_change + 0.5 * convexity * (yield_change ** 2)
+    
+    return price_change
