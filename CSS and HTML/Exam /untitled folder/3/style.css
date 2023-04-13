@@ -1,0 +1,380 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Arial:100,200,300,400,500,600,700,800,900&display=swap");
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    margin:0px;
+  }
+
+
+
+  .header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    background-color: white;
+  }
+
+  .header .logo {
+    font-size: 30px;
+    line-height: 1;
+    margin-left:90px;
+    justify-content: center;
+    align-items: center;
+    display: flex;    
+
+  }
+
+  .header .nav {
+    display: flex;
+  }
+  
+  .header .nav .nav-item {
+
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .nav .nav-item .nav-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+/* Section 1 */
+.image-section {
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-color: #85dcff;
+  }
+  
+  .image-container {
+
+    position: absolute;
+    left:60%;
+    height: 100%;
+    background-color: #eee; /* set background color for the rectangle */
+    overflow: hidden; /* hide any overflow from the image */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* scale and crop the image to fill the container */
+  }
+  
+
+.text-container{
+    padding:200px;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+}
+  .buttons-row {
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .donate-container {
+    flex-grow: 1;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .newsletter-container {
+    flex-grow: 1;
+    background-color: black;
+    color:white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+
+
+  }
+
+.section1-title{
+    font-size: 40px;
+    margin-bottom: 20px;
+    
+}
+
+.section1-text{
+    font-size: 19px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #262626;
+}
+
+/* section 2 */
+.section2-titles{
+    font-size: 19px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin:auto;
+}
+
+.section2-titles h2{
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.section2-images{
+    display: flex;
+    gap: 120px;
+    margin:120px;
+}
+
+.section2-images .item{
+    display:flex;
+    flex-direction: column;
+}
+
+.section2-item i{
+    font-size: 200px;
+    color: #85dcff;
+}
+
+.section2-item{
+    text-align: center;
+}
+
+.section2-item p{
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 0;
+    color: #343434;
+}
+
+/* Section 3*/
+
+.mission{
+    background-color: #85dcff;
+    text-align: center;
+    align-content: center;
+    padding:100px
+}
+
+.column-container {
+    max-width: 1000px;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+
+    gap: 50px;
+  }
+  
+  .column {
+    flex-basis: 45%;
+  }
+
+  .column ul li{
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    color: #000000;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  .bullet {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  .mission-button{
+    background-color: black;
+    color:white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    margin:auto;
+    font-size:20px;
+  }
+
+/* Section 4 */
+
+.section4-title{
+    font-size: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin:auto;
+}
+
+.section4-subtitle{
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin:auto;
+    color: #4a4949;
+    font-weight: 1;
+}
+
+.meta-cont {
+    padding:20px;
+  }
+  
+  .animals-container {
+    display: flex;
+    gap:40px;
+  }
+  
+  .animals-container img {
+    flex-shrink: 1;
+    padding:20px;
+    max-width: 21%; 
+    height: auto;
+  }
+
+/* Section 5*/
+
+.section5-title{
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin:auto;
+}
+  
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    max-width: 1400px;
+    border: 1px solid rgb(178, 178, 178);
+    box-sizing: border-box;
+  }
+
+  .card .card-header{
+    padding:20px;
+    color:black;
+  }
+
+  .card .card-body{
+    color:black;
+    padding:20px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .card-header {
+    background-color: #85dcff;
+    color: white;
+    padding: 10px;
+  }
+  
+  .card-body {
+    background-color: white;
+    padding: 10px;
+  }
+  
+
+/* Section 6*/
+.subscribe-container {
+    display: flex;
+    margin:0;
+    padding:0;
+  }
+  
+  .subscribe-container img {
+    width: 50%;
+    margin:0;
+    padding:0;
+  }
+  
+  .subscribe-text {
+    padding:100px;
+    margin-left: 50px;
+    text-align: left;
+  }
+
+  .sec6-title{
+    font-size: 40px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin:auto;
+  }
+
+  .sec6-text{
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin:auto;
+    color:#262626
+  }
+  
+  .mission-button {
+    background-color: black;
+    color:white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    margin:auto;
+    font-size:20px;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: grey; /* Set the default value text color */
+  }
+  
+  input[type="email"]:focus {
+    outline: none;
+    border: 1px solid #85dcff; /* Change the border color when focused */
+  }
+  
+  input[type="email"]:focus::placeholder {
+    color: transparent; /* Hide the placeholder text when focused */
+  }
+  
+  input[type="email"]::placeholder {
+    color: grey; /* Set the placeholder text color */
+  }
+  
