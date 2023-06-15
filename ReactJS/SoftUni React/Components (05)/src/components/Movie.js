@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styles from './Movie.module.css';
 
+// we deconstruct the props object and get the properties we need
 export default function Movie({
     id,
     title,
@@ -12,14 +13,16 @@ export default function Movie({
     onMovieSelect,
     selected,
 }) {
+    // whenever the component is mounted, title updated or unmounted, the useEffect hook will be called
     useEffect(() => {
         console.log(`Movie ${title} - mounted!`);
-        
+
         return () => {
             console.log(`Movie ${title} - unmounted!`);
         }
     }, [title]);
 
+    // whenever the component title is updated or component selected, the useEffect hook will be called
     useEffect(() => {
         console.log(`Movie ${title} - updated!`);
     }, [selected, title]);

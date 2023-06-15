@@ -14,6 +14,7 @@ export default function MovieList({
 
     // let movieList = movies.map(movie => <li><Movie {...movie} /></li>);
 
+    // Take the movies object map it and pass each movie object to the Movie component as props. The Movie component will then render the movie object.
     return (
         <ul>
             {movies.map((movie) => (
