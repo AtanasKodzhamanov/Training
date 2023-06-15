@@ -3,6 +3,8 @@ import Counter from './components/Counter';
 import MovieList from './components/MovieList';
 import Timer from './components/Timer';
 
+// We get a movies object defined in the APP component. The movie object will be passed down to the MovieList component as a prop.
+
 function App() {
     const movies = [
         { title: 'Man of Steel', year: 2008, cast: ['Henry Cavil', 'Russell Crowe'] },

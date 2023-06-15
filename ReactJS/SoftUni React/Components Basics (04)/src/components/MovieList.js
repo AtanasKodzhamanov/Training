@@ -1,5 +1,6 @@
 import Movie from './Movie';
 
+// We pass the movies object and then give its properties to the Movie component as props.
 const MovieList = (props) => {
     return (
         <div>
