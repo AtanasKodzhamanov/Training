@@ -1,0 +1,20 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block page_content %}
+<section id="edit">
+    <div class="form">
+        <!-- Title of the Page -->
+        <h2>Edit Event</h2>
+
+        <!-- Edit Event Form -->
+        <form class="edit-form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <!-- Edit Button -->
+            <button class="btn" type="submit" >Edit</button>
+        </form>
+        <!-- End Edit Event Form -->
+    </div>
+</section>
+{% endblock %}

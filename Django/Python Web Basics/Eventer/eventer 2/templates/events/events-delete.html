@@ -1,0 +1,35 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block page_content %}
+<section id="delete-page">
+    <div class="form">
+        <!-- Title of the Page -->
+        <h2>Delete Event</h2>
+
+        <!-- Delete Event Form -->
+        <form method="post">
+            {% csrf_token %}
+            <!-- Event Name Field -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="{{ event.event_name }}" disabled />
+
+            <!-- Other fields: Category, Description, Date, Event Image -->
+            <label for="category">Category:</label>
+            <input type="text" name="category" value="{{ event.get_category_display }}" disabled />
+
+            <label for="description">Description:</label>
+            <textarea name="description" disabled>{{ event.description }}</textarea>
+
+            <label for="date">Date:</label>
+            <input type="text" name="date" value="{{ event.date }}" disabled />
+
+            <label for="imageUrl">Event Image:</label>
+            <input type="text" name="imageUrl" value="{{ event.event_image }}" disabled />
+
+            <!-- Delete Button -->
+            <button class="btn" type="submit">Delete</button>
+        </form>
+        <!-- End Delete Event Form -->
+    </div>
+</section>
+{% endblock %}
